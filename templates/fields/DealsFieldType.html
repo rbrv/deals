@@ -1,0 +1,131 @@
+{#
+/**
+ * Deals plugin for Craft CMS
+ *
+ * DealsFieldType HTML
+ *
+ * @author    Stephen Hamilton
+ * @copyright Copyright (c) 2016 Stephen Hamilton
+ * @link      http://www.shtc.co.uk
+ * @package   Deals
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+<div class="deals-fields">
+
+	<div class="field">
+		<div class="input ltr">
+			{{  forms.checkboxField({
+			    id: id ~ 'enabled',
+			    label: "Enabled"|t,
+			    name: name ~ '[enabled]',
+			    value : 'on',
+			    checked: values.enabled
+			}) }}
+		</div>
+	</div>
+	
+	<div class="field">
+		<div class="heading">
+			<label>Description</label>
+		</div>
+		<div class="input ltr">
+			<div class="textwrapper">
+				{{ forms.textField({
+				    id: id ~ 'description',
+				    class: 'nicetext',
+				    name: name ~ '[description]',
+				    value: values.description,
+				    required: false,
+				}) }}
+			</div>
+		</div>
+	</div>
+	
+	<table class="data">
+		<thead>
+			<tr>
+				<th>For each multiple of:</th>
+				<th>Receive:</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<div class="input ltr">
+						<div class="flex">
+							<div class="textwrapper">
+								{{ forms.textField({
+								    id: id ~ 'amount',
+								    class: '',
+								    name: name ~ '[amount]',
+								    value: values.amount,
+								    required: false,
+								}) }}
+							</div>
+							<div class="label light">qty</div>
+						</div>
+					</div>
+					
+				</td>
+				<td>
+					
+					<div class="input ltr">
+						<div class="flex">
+							<div class="textwrapper">
+								{{ forms.textField({
+								    id: id ~ 'qtyDiscount',
+								    class: '',
+								    name: name ~ '[qtyDiscount]',
+								    value: values.qtyDiscount,
+								    required: false,
+								}) }}
+							</div>
+							<div class="label light">free</div>
+						</div>
+					</div>
+					
+					<span>or</span>
+					
+					<div class="input ltr">
+						<div class="flex">
+							<div class="textwrapper">
+								{{ forms.textField({
+								    id: id ~ 'amountDiscount',
+								    class: '',
+								    name: name ~ '[amountDiscount]',
+								    value: values.amountDiscount,
+									unit: craft.commerce.settings.defaultCurrency,
+								    required: false,
+								}) }}
+							</div>
+							<div class="label light">discount</div>
+						</div>
+					</div>
+					
+					<span>or</span>
+					
+					<div class="input ltr">
+						<div class="flex">
+							<div class="textwrapper">
+								{{ forms.textField({
+								    id: id ~ 'percentageDiscount',
+								    class: '',
+								    name: name ~ '[percentageDiscount]',
+								    value: values.percentageDiscount,
+								    required: false,
+								}) }}
+							</div>
+							<div class="label light">% discount</div>
+						</div>
+					</div>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	
+</div>

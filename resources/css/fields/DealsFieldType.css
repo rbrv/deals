@@ -1,0 +1,20 @@
+/**
+ * Deals plugin for Craft CMS
+ *
+ * DealsFieldType CSS
+ *
+ * @author    Stephen Hamilton
+ * @copyright Copyright (c) 2016 Stephen Hamilton
+ * @link      http://www.shtc.co.uk
+ * @package   Deals
+ * @since     1.0.0
+ */
+
+input.inline { display: inline-block; width: 30px; }
+#fields-productSpecificDeal-field { margin: 24px 0; }
+#fields-productSpecificDeal-field .deals-fields { margin-top: 16px; }
+#fields-productSpecificDeal-field .deals-fields label { font-size: 11px; line-height: 1.2; color: rgba(0, 0, 0, 0.5); font-weight: bold; }
+#fields-productSpecificDeal-field .deals-fields .field { margin: 16px 0; }
+#fields-productSpecificDeal-field table { width: 100%; }
+#fields-productSpecificDeal-field table td { vertical-align: top; }
+#fields-productSpecificDeal-field table td span { display: block; margin: 10px 0; font-size: 11px; line-height: 1.2; color: rgba(0, 0, 0, 0.5); }

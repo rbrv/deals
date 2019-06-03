@@ -1,0 +1,14 @@
+{
+	"name": "/deals",
+	"description": "Allow deals in Craft Commerce",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Stephen Hamilton",
+			"homepage": "http://www.shtc.co.uk"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
